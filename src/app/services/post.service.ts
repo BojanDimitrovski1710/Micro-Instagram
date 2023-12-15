@@ -42,6 +42,7 @@ export class PostService{
 
     deletePostWithId(id: number){
         var endpoint = this.ApiUrl + "photos/" + id;
+        console.log(endpoint)
         return this.http.delete(endpoint).pipe(
             catchError(this.handleError)
         );

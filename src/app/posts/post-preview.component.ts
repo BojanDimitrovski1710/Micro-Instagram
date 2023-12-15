@@ -26,7 +26,7 @@ export class PostPreviewComponent implements OnInit, OnDestroy {
 
   deletePost() {
     if(confirm("Are you sure you want to delete the post?")){
-      this.postService.deletePostWithId(this.itemId);
+      this.sub = this.postService.deletePostWithId(this.itemId).subscribe();
       alert("Post Succesfully Deleted");
       this.onBack();  
     }

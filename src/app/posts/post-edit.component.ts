@@ -20,7 +20,7 @@ export class PostEditComponent implements OnInit, OnDestroy {
   }
 
   onSave(){
-    this.postService.savePostWithId(this.post, this.itemId);
+    this.sub = this.postService.savePostWithId(this.post, this.itemId).subscribe();
     alert("Post sucessfully updated");
     this.router.navigate(['home']);
   }
