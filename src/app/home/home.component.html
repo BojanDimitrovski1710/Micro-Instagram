@@ -1,0 +1,17 @@
+﻿<div class="card ComponentContainer">
+  <div class="card-header head">
+      {{pageTitle}}
+  </div>
+  <div class="card-body">
+      <div class="card post" *ngFor="let thumbnail of thumbnails">
+        <div class="card-header clickable" (click)="openDetails(thumbnail.id)">
+          {{thumbnail.title}}
+        </div>
+        <div class="card-body">
+          <img class="clickable"  [src]="thumbnail.thumbnailUrl" alt="" (click)="openDetails(thumbnail.id)">
+          <hr>
+
+        </div>
+      </div>
+  </div>
+</div>

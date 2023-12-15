@@ -1,0 +1,37 @@
+
+.post-header{
+    margin-left: 20px;
+    text-align: center;
+}
+.head-table tbody tr td{
+    margin: auto;
+}
+
+.content tbody tr{
+    margin-bottom: 10px !important;
+}
+
+table{
+    table-layout: fixed;
+    width: 100%;
+}
+
+.btn{
+    margin: 10px;
+}
+
+.align-right{
+    text-align: end;
+}
+
+input{
+    width: 100%;
+}
+
+.field-error{
+    border: 1px solid red !important;
+}
+
+.invalid-input{
+    margin: 10px;
+}

@@ -1,0 +1,97 @@
+<div class="card-body ">
+    <div class="card">
+      <div class="card-header ">
+        <table>
+            <tbody class="head-table">
+                <tr>
+                    <td>
+                        <button class="btn btn-outline-secondary"
+                            style="width:80px"
+                            (click)="onBack()">
+                            <i class="fa fa-chevron-left"> Back</i>
+                        </button>
+                    </td>
+                    <td>
+                        <div class="post-header">
+                            Upload Post
+                        </div>
+                    </td>
+                    <td class="align-right">
+                        <button class="btn btn-outline-primary"
+                            style="width:80px"
+                            (click)="onSave()"
+                            type="submit"
+                            form="uploadForm"
+                            [disabled]="!form.valid">
+                            <i class="fa"> Upload</i>
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+      </div>
+      <div class="card-body preview-body">
+        <form #form="ngForm" id="uploadForm">
+            <div class="form-group">
+                <table class="content">
+                    <tbody>
+                        <tr>
+                            <td>
+                                <label for="album-id">Album ID</label>
+                            </td>
+                            <td colspan="2">
+                                <input type="number" name="album-id" id="album-id" placeholder={{post.albumId}} [(ngModel)]="post.albumId" required min="1" #albumIdField="ngModel">
+                            </td>
+                            <td colspan="2">
+                                <div [hidden]="albumIdField.valid" class="alert alert-danger invalid-input">
+                                    Invalid Album ID
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="title">Title</label>
+                            </td>
+                            <td colspan="2">
+                                <input type="text" name="title" id="title" placeholder={{post.title}} [(ngModel)]="post.title" required #titleField="ngModel">
+                            </td>
+                            <td colspan="2">
+                                <div [hidden]="titleField.valid" class="alert alert-danger invalid-input">
+                                    Invalid Title
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="url">Full Picture Url</label>
+                            </td>
+                            <td colspan="2">
+                                <input type="text" name="url" id="url" placeholder={{post.url}} [(ngModel)]="post.url" required #picUrl="ngModel">
+                            </td>
+                            <td colspan="2">
+                                <div [hidden]="picUrl.valid" class="alert alert-danger invalid-input">
+                                    Invalid Url
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="thumbnailUrl">Thumbnail Url</label>
+                            </td>
+                            <td colspan="2">
+                                <input type="text" name="thumbnailUrl" id="thumbnailUrl" placeholder={{post.thumbnailUrl}} value={{post.thumbnailUrl}}  [(ngModel)]="post.thumbnailUrl" required #thumbnailUrl="ngModel">
+                            </td>
+                            <td colspan="2">
+                                <div [hidden]="thumbnailUrl.valid" class="alert alert-danger invalid-input">
+                                    Invalid Thumbnail Url
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>    
+            </div>
+        </form>
+        <hr>
+      </div>
+    </div>
+</div>

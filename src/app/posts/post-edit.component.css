@@ -1,0 +1,29 @@
+
+.post-header{
+    margin-left: 20px;
+    text-align: center;
+}
+tbody tr td{
+    margin: auto;
+}
+
+table{
+    table-layout: fixed;
+    width: 100%;
+}
+
+.btn{
+    margin: 10px;
+}
+
+.align-right{
+    text-align: end;
+}
+
+input{
+    width: 100%;
+}
+
+.invalid-input{
+    margin: 10px;
+}
